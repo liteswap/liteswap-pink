@@ -13,6 +13,10 @@ export default function ThemeProvider({ children }) {
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://rsms.me/inter/inter.css');
+  html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+  }
   
   html,
   body {
@@ -21,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    font-family: Inter, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
