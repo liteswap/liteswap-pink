@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useSpring, animated } from 'react-spring'
 
+import { ReactComponent as GitHub } from './assets/github.svg'
+
 const Background = styled.div`
   padding: 0;
   margin: 0;
@@ -38,6 +40,15 @@ const Copied = styled(animated.h1)`
   font-weight: 300;
   user-select: none;
 `
+const GitHubLogo = styled(GitHub)`
+  padding: 1rem;
+  margin: 0;
+  width: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  user-select: none;
+`
 
 const uniswapPink = '#DC6BE5'
 const duration = 200
@@ -71,6 +82,9 @@ export default function App() {
         </CopyToClipboard>
         <Copied style={props}>Copied ✓</Copied>
       </Body>
+      <a href="https://github.com/Uniswap/uniswap-pink" target="_blank" rel="noopener noreferrer">
+        <GitHubLogo />
+      </a>
     </Background>
   )
 }
