@@ -34,7 +34,7 @@ const Copied = styled(animated.h1)`
   padding: 0;
   margin: 0;
   text-align: center;
-  font-size: 10vw;
+  font-size: 4vw;
   font-weight: 300;
   user-select: none;
 `
@@ -69,7 +69,7 @@ export default function App() {
         >
           <Text>{uniswapPink}</Text>
         </CopyToClipboard>
-        <Copied style={props}>✓</Copied>
+        <Copied style={props}>Copied ✓</Copied>
       </Body>
     </Background>
   )
